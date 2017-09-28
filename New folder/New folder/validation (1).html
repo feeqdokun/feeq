@@ -1,0 +1,78 @@
+<html>
+<head>
+<title> Monday, 14th August 2017</title>
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+<script src="myjs.js"></script>
+<style type="text/css">
+
+
+</style>
+
+</head>
+<body>
+<div class="container-fluid">
+	<div class="row">
+	<div class="col-xs-12">
+	
+	<form action="index.html" method="post">
+	<div class="form-group">
+	<label> Score</label>
+	<input type="text" id='no1' class="form-control"/>
+	<div id="grade"></div>
+	</div>
+	
+	<div class="form-group">
+
+	<input type="button" onclick="checkGrade(document.getElementById('no1').value)" value="Check" class="btn btn-primary"/>
+	</div>
+	</form>
+  	
+	</div>	
+	</div>
+</div>
+<script>
+
+
+alert(calSum(12,23));
+
+function calSum(a,b){
+	var sum = a + b ;
+	
+	return sum;
+	//alert(sum);
+}
+
+
+
+
+
+
+
+
+function checkGrade(x){
+	if(x > 50){
+		document.getElementById('grade').innerHTML = "Passed!";
+		var col = formatScore("Passed");
+	}else{
+		document.getElementById('grade').innerHTML = "Failed!";
+		var col = formatScore("Failed");
+	}
+	document.getElementById('grade').style.color = col;
+}
+
+function formatScore(val){
+	if(val =='Passed'){
+		color = "green";
+	}else{
+		color = "red";
+	}
+	return  color;
+}
+
+
+</script>
+
+<script src="bootstrap/js/jquery.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

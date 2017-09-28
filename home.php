@@ -1,6 +1,8 @@
 <?php
 include("header.php");
-// check if user is logged in, only logged in user can access this page
+//check if user is logged in, only logged in user can access this page
+
+//check if user is logged in, only logged in user can access this page
 if(!isset($_SESSION['user_online'])){ 
 	header("location:admin.php");
 }
